@@ -1,0 +1,8 @@
+.required{
+  content:"*";color:red;
+}
+
+.my_footer p{
+    padding-top:20px;
+    font-size:14px;
+    }

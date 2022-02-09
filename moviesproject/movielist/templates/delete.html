@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block body %}
+<form method="POST">
+{% csrf_token %}
+    <br>
+    <div class="form-group d-flex justify-content-center">
+        <div class="col-xs-12 col-sm-3">
+        <div class="input-group col-xs-12 col-sm-9">
+            Are you sure, you want to delete...???<br><br>
+        <input type="submit" class="btn btn-primary btn-sm">
+    </div>
+
+</form>
+{% endblock %}

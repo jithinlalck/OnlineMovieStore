@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block body %}
+<form action="" method="POST">
+{% csrf_token %}
+
+
+<div class="container mt-3">
+    <div class="row">
+        {% for i in movie_list %}
+        <div class="col-sm-4    ">
+            <div class="card bg-light mb-3" style="width: 18rem;">
+                <img src="{{ i.image.url}}" class="card-img-top" alt="..." width="100" height="200">
+                 <div class="card-body" style="height: 18vw;">
+                        <h5 class="card-title">{{ i.name }}</h5>
+                        <p class="card-text">{{ i.desc }}</p>
+
+                    </div>
+                <div class="card-footer">
+                    <a href="{% url 'movieapp:movie_detail' i.id %}" class="btn btn-primary btn-sm">view details</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</form>
+{% endblock %}

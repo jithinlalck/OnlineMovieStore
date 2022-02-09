@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+<form action="" method="post" enctype="multipart/form-data">
+{% csrf_token %}
+    <br>
+<div class="form-group">
+    <label class="col-sm-3 control-label no-padding-right">
+        Name<span class="required">*</span>
+    </label>
+    <div class="col-xs-12 col-sm-3">
+        <div class="input-group col-xs-12 col-sm-9">
+            <input type="text" name="txtName" class="form-control">
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="col-sm-3 control-label no-padding-right">
+        Description<span class="required">*</span>
+    </label>
+    <div class="col-xs-12 col-sm-3">
+        <div class="input-group col-xs-12 col-sm-9">
+            <input type="text" name="txtDesc" class="form-control">
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="col-sm-3 control-label no-padding-right">
+        Year<span class="required">*</span>
+    </label>
+    <div class="col-xs-12 col-sm-3">
+        <div class="input-group col-xs-12 col-sm-9">
+            <input type="text" name="txtYear" class="form-control">
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <label class="col-sm-3 control-label no-padding-right">
+        Image<span class="required">*</span>
+    </label>
+    <div class="col-xs-12 col-sm-3">
+        <div class="input-group col-xs-12 col-sm-9">
+            <input type="file" name="img"  class="form-control">
+        </div>
+    </div>
+</div>
+
+    <div class="form-group">
+    <label class="col-sm-3 control-label no-padding-right">
+    &nbsp;
+    </label>
+    <div class="col-xs-12 col-sm-3">
+        <div class="input-group col-xs-12 col-sm-9">
+            <input type="submit"  class="form-control btn btn-primary" >
+        </div>
+    </div>
+</div>
+
+</form>
+</div>
+{% endblock %}
